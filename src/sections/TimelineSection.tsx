@@ -180,53 +180,29 @@ export default function TimelineSection() {
           </h2>
           <div className="divider-line mb-10" />
 
-          <div ref={timelineRef} className="relative">
-            {/* Vertical line */}
-            <div
-              className="absolute left-1/2 top-0 bottom-0 w-[2px] bg-antique-gold/40 -translate-x-1/2 hidden md:block"
-            />
-
-            <div className="flex flex-col gap-6 relative">
-              {timelineItems.map((item, i) => (
-                <div
-                  key={i}
-                  className={`timeline-item flex flex-col md:flex-row items-center gap-4 ${
-                    i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
-                  }`}
-                  style={{
-                    opacity: 0,
-                    transform: 'translateX(0)',
-                  }}
-                >
-                  {/* Timeline dot - centered on desktop */}
-                  <div className="hidden md:flex items-center justify-center w-10">
-                    <div className="w-3 h-3 rounded-full border-2 border-antique-gold bg-soft-linen z-10" />
-                  </div>
-
-                  {/* Content card */}
-                  <div
-                    className="flex-1 max-w-[400px] text-center md:text-left rounded-md p-5 md:p-6"
-                    style={{
-                      background: 'rgba(247,240,232,0.4)',
-                      border: '1px solid rgba(201,168,124,0.15)',
-                    }}
-                  >
-                    <p className="font-display text-[20px] md:text-[24px] text-antique-gold mb-1">
-                      {item.time}
-                    </p>
-                    <p className="font-body text-[18px] md:text-[20px] text-warm-brown mb-1">
-                      {item.title}
-                    </p>
-                    <p className="font-body text-base text-muted-sepia">
-                      {item.sub}
-                    </p>
-                  </div>
-
-                  {/* Spacer for alternating layout */}
-                  <div className="hidden md:block flex-1 max-w-[400px]" />
-                </div>
-              ))}
-            </div>
+          <div ref={timelineRef} className="flex flex-col gap-5 md:gap-6 items-center max-w-[520px] mx-auto">
+            {timelineItems.map((item, i) => (
+              <div
+                key={i}
+                className="timeline-item w-full text-center rounded-md p-5 md:p-6"
+                style={{
+                  background: 'rgba(247,240,232,0.4)',
+                  border: '1px solid rgba(201,168,124,0.15)',
+                  opacity: 0,
+                  transform: 'translateY(30px)',
+                }}
+              >
+                <p className="font-display text-[20px] md:text-[24px] text-antique-gold mb-1">
+                  {item.time}
+                </p>
+                <p className="font-body text-[18px] md:text-[20px] text-warm-brown mb-1">
+                  {item.title}
+                </p>
+                <p className="font-body text-base text-muted-sepia">
+                  {item.sub}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </div>
