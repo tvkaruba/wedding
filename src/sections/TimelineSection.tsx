@@ -148,12 +148,12 @@ export default function TimelineSection() {
           ) : (
             <div
               ref={countdownRef}
-              className="flex flex-wrap justify-center gap-3 md:gap-6"
+              className="flex flex-wrap justify-center gap-2 md:gap-6"
             >
               {countdownData.map((c, i) => (
                 <div
                   key={i}
-                  className="countdown-box flex flex-col items-center justify-center min-w-[80px] md:min-w-[110px] py-5 px-4 rounded-md"
+                  className="countdown-box flex flex-col items-center justify-center min-w-[62px] md:min-w-[110px] py-3 px-2 md:py-5 md:px-4 rounded-md"
                   style={{
                     background: 'rgba(247,240,232,0.5)',
                     border: '1px solid rgba(201,168,124,0.2)',
@@ -161,10 +161,10 @@ export default function TimelineSection() {
                     transform: 'translateY(20px)',
                   }}
                 >
-                  <span className="font-display text-[32px] md:text-[48px] text-antique-gold">
+                  <span className="font-display text-[22px] md:text-[48px] text-antique-gold">
                     {c.value}
                   </span>
-                  <span className="font-body text-sm uppercase tracking-[0.1em] text-muted-sepia mt-1">
+                  <span className="font-body text-xs md:text-sm uppercase tracking-[0.1em] text-muted-sepia mt-1">
                     {c.label}
                   </span>
                 </div>
