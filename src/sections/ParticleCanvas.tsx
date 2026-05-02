@@ -23,7 +23,6 @@ export default function ParticleCanvas() {
   const mouseRef = useRef({ x: -1000, y: -1000 });
   const timeRef = useRef(0);
   const rafRef = useRef<number>(0);
-  const heroVisibleRef = useRef(true);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -45,16 +44,6 @@ export default function ParticleCanvas() {
 
     resize();
     window.addEventListener('resize', resize);
-
-    // Hero visibility observer
-    const hero = document.getElementById('hero-section');
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        heroVisibleRef.current = entry.isIntersecting;
-      },
-      { threshold: 0.05 }
-    );
-    if (hero) observer.observe(hero);
 
     const isMobile = window.innerWidth < 768;
     const PARTICLE_COUNT = isMobile ? 50 : 100;
@@ -154,8 +143,6 @@ export default function ParticleCanvas() {
     function animate() {
       rafRef.current = requestAnimationFrame(animate);
 
-      if (!heroVisibleRef.current) return;
-
       ctx!.clearRect(0, 0, width, height);
       ctx!.globalCompositeOperation = 'lighter';
 
@@ -211,7 +198,6 @@ export default function ParticleCanvas() {
       cancelAnimationFrame(rafRef.current);
       window.removeEventListener('resize', resize);
       window.removeEventListener('mousemove', handleMouseMove);
-      if (hero) observer.unobserve(hero);
     };
   }, []);
 
