@@ -9,7 +9,7 @@ export const config = {
     time: '15:00',
     venue: 'Развлекательный центр «Серебряный шар»',
     location: 'г. Чайковский, Пермский край',
-    mapLink: 'https://yandex.ru/maps/search/серебряный+шар+чайковский',
+    mapLink: 'https://yandex.ru/maps/-/CPSpIUNT',
   },
   rsvp: {
     // Укажите URL endpoint для отправки ответов формы.

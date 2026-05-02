@@ -99,7 +99,7 @@ export default function DetailsSection() {
               <p className="font-body text-sm uppercase tracking-[0.15em] text-muted-sepia">
                 {d.label}
               </p>
-              <p className="font-display text-[28px] md:text-[36px] text-warm-brown">
+              <p className="font-display text-[28px] md:text-[28px] text-warm-brown">
                 {d.value}
               </p>
               <p className="font-body text-base md:text-lg text-muted-sepia leading-relaxed max-w-[480px]">
