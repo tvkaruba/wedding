@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 36 33% 94%;
+    --foreground: 30 18% 20%;
+    --card: 36 33% 94%;
+    --card-foreground: 30 18% 20%;
+    --popover: 36 33% 94%;
+    --popover-foreground: 30 18% 20%;
+    --primary: 34 36% 63%;
+    --primary-foreground: 36 33% 94%;
+    --secondary: 32 24% 87%;
+    --secondary-foreground: 30 18% 20%;
+    --muted: 32 24% 87%;
+    --muted-foreground: 28 24% 44%;
+    --accent: 34 36% 63%;
+    --accent-foreground: 36 33% 94%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 34 36% 63% / 0.3;
+    --input: 34 36% 63% / 0.2;
+    --ring: 34 36% 63%;
+    --radius: 0.25rem;
+  }
+
+  html {
+    scroll-behavior: auto;
+    font-size: 16px;
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  body {
+    background-color: #EDE4D5;
+    color: #3D3229;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .font-script {
+    font-family: 'Great Vibes', cursive;
+  }
+
+  .font-body {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .paper-grain {
+    position: fixed;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image: url('./textures/paper-texture.jpg');
+    background-repeat: repeat;
+    background-size: 256px;
+    opacity: 0.06;
+    mix-blend-mode: multiply;
+  }
+
+  .vignette-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(61,50,41,0.22) 100%);
+  }
+
+  .page-background {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(
+      180deg,
+      #EDE4D5 0%,
+      #E8DCC8 25%,
+      #E2D4BF 50%,
+      #DCCDAF 75%,
+      #D9CDBA 100%
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  .section-padding {
+    @apply py-20 md:py-40;
+  }
+
+  .content-max-width {
+    @apply max-w-[780px] mx-auto px-6;
+  }
+
+  .content-max-width-sm {
+    @apply max-w-[660px] mx-auto px-6;
+  }
+
+  .content-max-width-form {
+    @apply max-w-[620px] mx-auto px-6;
+  }
+
+  .content-max-width-gallery {
+    @apply max-w-[900px] mx-auto px-6;
+  }
+
+  .divider-line {
+    width: 160px;
+    height: 1px;
+    background-color: #C9A87C;
+    opacity: 0.5;
+    margin: 28px auto 56px;
+    position: relative;
+  }
+
+  .divider-line::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 8px;
+    height: 8px;
+    background-color: #C9A87C;
+    opacity: 0.6;
+  }
+}
+
+@layer base {
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}

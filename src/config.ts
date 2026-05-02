@@ -1,0 +1,23 @@
+export const config = {
+  couple: {
+    namesFull: 'Павел & Ольга',
+    namesShort: 'Паша & Оля',
+    namesFormal: 'Павел и Ольга',
+  },
+  wedding: {
+    date: '08.07.2026',
+    time: '15:00',
+    venue: 'Развлекательный центр «Серебряный шар»',
+    location: 'г. Чайковский, Пермский край',
+    mapLink: 'https://yandex.ru/maps/search/серебряный+шар+чайковский',
+  },
+  rsvp: {
+    // Укажите URL endpoint для отправки ответов формы.
+    // Примеры:
+    //   Google Apps Script — 'https://script.google.com/macros/s/XXXXXXXX/exec'
+    //   Formspree        — 'https://formspree.io/f/XXXXXXXX'
+    //   Getform          — 'https://getform.io/f/XXXXXXXX'
+    endpoint: '',
+    deadline: '1 июня 2026 года',
+  },
+};
