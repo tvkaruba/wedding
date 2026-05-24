@@ -6,7 +6,7 @@ export const config = {
   },
   wedding: {
     date: '08.07.2026',
-    time: '15:00',
+    time: '18:00',
     venue: 'Развлекательный центр «Серебряный шар»',
     location: 'г. Чайковский, Пермский край',
     mapLink: 'https://yandex.ru/maps/-/CPSpIUNT',
@@ -18,6 +18,6 @@ export const config = {
     //   Formspree        — 'https://formspree.io/f/XXXXXXXX'
     //   Getform          — 'https://getform.io/f/XXXXXXXX'
     endpoint: '',
-    deadline: '1 июня 2026 года',
+    deadline: '7 июня 2026 года',
   },
 };

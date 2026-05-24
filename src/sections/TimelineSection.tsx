@@ -16,7 +16,7 @@ function parseWeddingDate(dateStr: string, timeStr: string): Date {
 }
 
 function getTimeLeft(): TimeLeft {
-  const target = parseWeddingDate(config.wedding.date, config.wedding.time);
+  const target = parseWeddingDate(config.wedding.date, '11:30');
   const now = new Date();
   const diff = target.getTime() - now.getTime();
 
