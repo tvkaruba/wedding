@@ -207,7 +207,7 @@ export default function RSVPSection() {
               style={{ opacity: 0, transform: 'translateY(15px)' }}
             >
               <label className="font-body text-sm uppercase tracking-[0.1em] text-muted-sepia">
-                Тёплое слово для {config.couple.namesShort.replace('&', 'и')}
+                Тёплое слово для Паши и Оли
               </label>
               <textarea
                 name="message"
