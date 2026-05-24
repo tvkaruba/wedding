@@ -81,17 +81,6 @@ export default function FooterSection() {
         >
           {config.wedding.date}
         </p>
-
-        <p
-          ref={loveRef}
-          className="font-body text-sm mt-8"
-          style={{
-            color: 'rgba(247,240,232,0.4)',
-            opacity: 0,
-          }}
-        >
-          С любовью, {config.couple.namesFormal}
-        </p>
       </div>
     </footer>
   );
