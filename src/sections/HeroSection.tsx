@@ -119,7 +119,7 @@ export default function HeroSection() {
         {/* Date */}
         <p
           ref={dateRef}
-          className="font-display text-[28px] md:text-[40px] text-antique-gold uppercase tracking-[0.15em]"
+          className="font-display text-[28px] md:text-[40px] text-muted-sepia uppercase tracking-[0.15em]"
           style={{ opacity: 0, transform: 'translateY(15px)' }}
         >
           {config.wedding.date}

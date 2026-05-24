@@ -142,7 +142,7 @@ export default function TimelineSection() {
           <div className="divider-line" />
 
           {isWeddingDay ? (
-            <p className="font-script text-[32px] md:text-[44px] text-antique-gold">
+            <p className="font-script text-[32px] md:text-[44px] text-muted-sepia">
               Сегодня самый важный день! 💛
             </p>
           ) : (
@@ -161,7 +161,7 @@ export default function TimelineSection() {
                     transform: 'translateY(20px)',
                   }}
                 >
-                  <span className="font-display text-[22px] md:text-[48px] text-antique-gold">
+                  <span className="font-display text-[22px] md:text-[48px] text-muted-sepia">
                     {c.value}
                   </span>
                   <span className="font-body text-xs md:text-sm uppercase tracking-[0.1em] text-muted-sepia mt-1">
@@ -192,7 +192,7 @@ export default function TimelineSection() {
                   transform: 'translateY(30px)',
                 }}
               >
-                <p className="font-display text-[20px] md:text-[24px] text-antique-gold mb-1">
+                <p className="font-display text-[20px] md:text-[24px] text-muted-sepia mb-1">
                   {item.time}
                 </p>
                 <p className="font-body text-[18px] md:text-[20px] text-warm-brown mb-1">

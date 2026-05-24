@@ -110,7 +110,7 @@ export default function DetailsSection() {
                   href={d.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-body text-base text-antique-gold underline hover:text-warm-brown transition-colors"
+                  className="font-body text-base text-muted-sepia underline hover:text-warm-brown transition-colors"
                 >
                   {d.linkText}
                 </a>
