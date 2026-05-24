@@ -246,7 +246,7 @@ export default function RSVPSection() {
             }}
           >
             <p className="font-display italic text-[24px] md:text-[30px] text-warm-brown">
-              Спасибо! Мы получили ваш ответ и будем ждать встречи 💛
+              Спасибо! Мы получили ваш ответ и будем ждать встречи ♡
             </p>
             <style>{`
               @keyframes fadeInScale {
