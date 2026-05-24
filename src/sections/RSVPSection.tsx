@@ -63,7 +63,7 @@ export default function RSVPSection() {
     const data = {
       name: formData.get('name') as string,
       attendance: formData.get('attendance') as string,
-      dietary: formData.get('dietary') as string,
+      alcohol: formData.get('alcohol') as string,
       message: formData.get('message') as string,
       submittedAt: new Date().toISOString(),
     };
@@ -185,18 +185,18 @@ export default function RSVPSection() {
               </div>
             </div>
 
-            {/* Dietary */}
+            {/* Alcohol */}
             <div
               className="form-field flex flex-col gap-2"
               style={{ opacity: 0, transform: 'translateY(15px)' }}
             >
               <label className="font-body text-sm uppercase tracking-[0.1em] text-muted-sepia">
-                Особенности питания (аллергии, предпочтения)
+                Какой алкоголь вы предпочитаете
               </label>
               <input
-                name="dietary"
+                name="alcohol"
                 type="text"
-                placeholder="Вегетарианец / Аллергия на орехи"
+                placeholder="Вино / Водка / Не пью"
                 className="w-full bg-warm-ivory/60 border border-antique-gold/30 rounded px-5 py-4 font-body text-lg text-warm-brown placeholder:text-muted-sepia/50 focus:outline-none focus:border-antique-gold focus:ring-3 focus:ring-antique-gold/15 transition-all"
               />
             </div>
