@@ -12,12 +12,8 @@ export const config = {
     mapLink: 'https://yandex.ru/maps/-/CPSpIUNT',
   },
   rsvp: {
-    // Укажите URL endpoint для отправки ответов формы.
-    // Примеры:
-    //   Google Apps Script — 'https://script.google.com/macros/s/XXXXXXXX/exec'
-    //   Formspree        — 'https://formspree.io/f/XXXXXXXX'
-    //   Getform          — 'https://getform.io/f/XXXXXXXX'
-    endpoint: '',
+    // URL endpoint для отправки ответов формы.
+    endpoint: 'https://script.google.com/macros/s/AKfycbyAOEBQ6uu9lnLrrnU-EDLb5BzyjHkFIhi0OQjtPwhqbLw0ufU_N2ye8hIVF6ZQVBJW/exec',
     deadline: '7 июня 2026 года',
   },
 };
